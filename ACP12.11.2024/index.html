@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: lightcyan;
+      }
+      h2 {
+        color: #9b1d1d;
+      }
+      h1 {
+        color: #790362;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript async / await</h2>
+    <h1 id="result"></h1>
+    <script>
+      async function product(a, b) {
+        let response = (await a) + b;
+        display(response);
+      }
+      function display(sum) {
+        document.getElementById("result").innerHTML = sum;
+      }
+      product(5, 20);
+    </script>
+  </body>
+</html>
